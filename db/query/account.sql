@@ -23,3 +23,7 @@ RETURNING *;
 -- name: DeleteAccount :exec
 DELETE FROM accounts
 WHERE id = $1;
+
+-- name: ListAccountIDs :many
+SELECT id FROM accounts
+ORDER BY id;
